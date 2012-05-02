@@ -1,0 +1,153 @@
+@CHARSET "utf-8";
+
+	
+
+.col-main-center {
+	width:490px;
+	height:400px;
+	float:left;
+	overflow:hidden;
+	margin-top:10px;
+}
+
+.col-main-center .home_center_ad{
+	border:1px solid #eee;
+	width:488px;
+	height:175px;
+	position:relative;
+}
+
+.col-main-center .home_news_div {
+	border:1px solid #eee;
+	margin-top:10px;
+	width:488px;
+	height:195px;
+}
+
+.col-main-center .home_news_div .module_title {
+	margin:0px 10px;
+}
+
+.col-main-center .home_news_div .news_ad {
+	position:relative;
+	border:1px solid #eee;
+	width:144px;
+	height:144px;
+	margin:5px 10px;
+	float:left;
+	overflow:hidden;
+}
+
+.col-main-center .home_news_div .news_ad img{
+	max-width:140px;
+	max-height:140px;
+	margin:2px;
+}
+
+.col-main-center .home_news_div .news_piece {
+	float:left;
+	overflow:hidden;
+	width:320px;
+	height:160px;
+}
+
+.col-main-center .home_news_div .news_piece li {
+	padding:0 10px;
+}
+
+.col-main-center .home_news_div .news_piece li.top a {
+	color:red;
+}
+
+.col-main-center .home_news_div .news_piece li dt {
+	margin:5px 0;
+}
+.col-main-center .home_news_div .news_piece li dt a{
+	margin:0px 1px;
+	font-size:1.1em;
+	color:#333;
+}
+.col-main-center .home_news_div .news_piece li dd {
+	color:#4F6A94;
+	width:100%;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	word-break:keep-all;
+	overflow:hidden;
+	border-bottom:1px solid #EEE;
+	padding:0 0 5px 0;
+}
+
+.col-sub .home_func {
+	width:285px;
+	height:58px;
+	margin:10px 5px;
+	overflow:hidden;
+	zoom:1;
+}
+
+.col-sub .home_func a{
+	height:58px;
+	float:left;
+	text-indent:-999em;
+	overflow:hidden;
+	background: url(../images/home/select_charactor.png) no-repeat;
+}
+
+.col-sub .home_func a.maijia {
+	background-position:0 0;
+	width:139px;
+}
+.col-sub .home_func a.maijia:hover {
+	background-position:0 -58px;
+	width:139px;
+}
+
+.col-sub .home_func a.dangkou {
+	background-position:-139px 0;
+	width:146px;
+}
+.col-sub .home_func a.dangkou:hover {
+	background-position:-137px -58px;
+	margin-left:-2px;
+	width:148px;
+}
+
+.col-sub .module_title h3{
+	width:40%;
+	font-size:15px;
+}
+
+.col-sub .home_special {
+	border:1px solid #DDD;
+	height:160px;
+	overflow:hidden;
+	padding:5px;
+}
+
+.col-sub .home_special .special_slide {
+	border: 1px solid #EEE;
+	margin-top:5px;
+	width:270px;
+	height:120px;
+}
+
+.col-sub .home_recommend {
+	background-color:#FFF8ED;
+	border:1px solid #DDD;
+	height:130px;
+	overflow:hidden;
+	padding:5px;
+	margin-top:5px;
+}
+
+.col-sub .home_recommend ul.recommend_shop {
+	margin:5px 2px;
+}
+
+.col-sub .home_recommend ul.recommend_shop li {
+	float:left;
+	display:inline;
+	margin-right:10px;
+	margin-top:3px;
+}

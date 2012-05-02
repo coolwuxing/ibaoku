@@ -1,0 +1,17 @@
+<div class="nav_home">
+	<p class="nav_header"><span>快速导航</span></p>
+	<volist name="cats" id="vo">
+	<dl class="nav_list">
+		<dt><a href="/items/cat/{$vo.cid}/" target="_blank">{$vo.name}</a></dt>
+		<volist name="vo['child']" id="sub">
+		<dd><a href='/items/subcat/{$sub.cid}/' target="_blank" title="{$sub.name}:{$sub.cnt}个宝贝">{$sub.name}</a></dd>
+		</volist>
+	</dl>
+	</volist>
+	<dl class="nav_list">
+		<dt>其他类别</dt>
+		<volist name="single_cats" id="single">
+		<dd><a href='/items/cat/{$single.cid}/' target="_blank" title="{$single.name}:{$single.cnt}个宝贝">{$single.name}</a></dd>
+		</volist>
+	</dl>
+</div>

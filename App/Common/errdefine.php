@@ -1,0 +1,3 @@
+<?php
+define('ERR_GENERAL_NOT_LOGIN',     -1001);
+define('ERR_GENERAL_TOKEN_FAILED',  -1002);

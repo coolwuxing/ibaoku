@@ -1,0 +1,44 @@
+<div class="toolbar">
+	<div style="margin:0 auto;width:985px;position:relative;">
+	<div class="menu">
+	<div class="barleft"></div>
+	<div class="barbody" id="toolbar">
+	<script id="toolbarTmpl" type="text/x-jquery-tmpl">
+		{{if ret==0}}
+		<li>
+			欢迎光临，淘宝用户（${tb_nick}）
+		</li>
+		{{if shop_id&&shop_id!=""}}
+		<li>
+			<a href="/i/">我的店铺</a>
+		</li>
+		{{/if}}
+		<li class="last">
+			<a>帮助中心</a>
+		</li>
+		{{else}}
+		<li>
+			欢迎光临，请先<a href="${login_url}">登录</a>
+		</li>
+		<li class="last">
+			<a>帮助中心</a>
+		</li>
+		{{/if}}
+	</script>
+	</div>
+	<div class="barright"></div>
+	</div>
+	</div>
+	<script type="text/javascript">
+	//toolbar
+	$.ajax({
+		type: 'POST',
+		url: '/login/verify',
+		data: {url:window.location.pathname+window.location.search},
+		dataType: "json",
+		success: function(data){
+			$("#toolbarTmpl").tmpl(data).appendTo('#toolbar');
+		}
+	});
+	</script>
+</div>

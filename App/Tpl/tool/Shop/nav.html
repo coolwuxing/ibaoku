@@ -1,0 +1,35 @@
+<div class="nav">
+	<ol id="g_nav_ol">
+		<volist name="div_list" id="vo">
+		<if condition="$i eq 1">
+			<li id="g_nav_home_li" class="selected"><a href="/" title="{$vo.name}"><span>{$vo.name}</span></a></li>
+		<else />
+			<li><span>{$vo.name}</span></li>
+		</if>
+		</volist>
+	</ol>
+	<ul>
+		<li><a href="#">宝库论坛</a>
+		<li><a href="#">开发日志</a>
+	</ul>
+</div>
+<div id="g_nav_dropdown" class="dropdown_wrap">
+	<volist name="div_list" id="vo">
+	<div class="dropdown_cont">
+		<if condition="$i eq 1">
+			<h2>Welcome!</h2>
+		<else />
+		<volist name="vo['sec']" id="sec">
+		<div class="dropdown_item">
+			<h2>{$sec.name}</h2>
+			<ul>
+				<volist name="sec['shop']" id="shop">
+				<li><a href="/items/shop/{$shop.id}/" target="_blank" title="电话:{$shop.mobile} QQ:{$shop.qq}">{$shop.addrno}[{$shop.name}]</a></li>
+				</volist>
+			</ul>
+		</div>
+		</volist>
+		</if>
+	</div>
+	</volist>
+</div>

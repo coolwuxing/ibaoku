@@ -1,0 +1,24 @@
+http://17zwd.com/ds.asp?id=652
+
+GET http://17zwd.com/ds.asp?id=652 HTTP/1.1
+Accept: text/html, application/xhtml+xml, */*
+Referer: http://www.17zwd.com/index.html
+Accept-Language: zh-CN
+User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+Accept-Encoding: gzip, deflate
+Host: 17zwd.com
+Proxy-Connection: Keep-Alive
+
+HTTP/1.1 302 Moved Temporarily
+Date: Wed, 28 Mar 2012 04:34:11 GMT
+Server: Microsoft-IIS/6.0
+X-Powered-By: ASP.NET
+Location: ga.asp?ww=yolajuan
+Content-Length: 139
+Content-Type: text/html
+Set-Cookie: ASPSESSIONIDQCSTAASR=PIGBOGMAJCICCJJLANACDODO; path=/
+Cache-Control: private
+X-Cache-Lookup: MISS from proxy:8080
+
+<head><title>Object moved</title></head>
+<body><h1>Object Moved</h1>This object may be found <a HREF="ga.asp?ww=yolajuan">here</a>.</body>
