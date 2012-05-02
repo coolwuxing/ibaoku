@@ -10,11 +10,14 @@
 		</li>
 		{{if shop_id&&shop_id!=""}}
 		<li>
-			<a href="/i/">我的店铺</a>
+			<a href="/i/">我的店铺</a>,<a href="javascript:void(0)" onclick="logout();">退出</a>
 		</li>
 		{{/if}}
-		<li class="last">
+		<li>
 			<a>帮助中心</a>
+		</li>
+		<li class="last">
+			<a href="javascript:void(0)" onclick="logout();">退出</a>
 		</li>
 		{{else}}
 		<li>
@@ -31,6 +34,18 @@
 	</div>
 	<script type="text/javascript">
 	//toolbar
+	function logout(){
+		$.ajax({
+			type: 'POST',
+			url: '/login/logout',
+			data: {url:window.location.pathname+window.location.search},
+			dataType: "json",
+			success: function(data){
+				$('#toolbar li').remove();
+				$("#toolbarTmpl").tmpl(data).appendTo('#toolbar');
+			}
+		});
+	}
 	$.ajax({
 		type: 'POST',
 		url: '/login/verify',

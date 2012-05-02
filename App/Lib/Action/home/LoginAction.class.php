@@ -93,5 +93,18 @@ class LoginAction extends Action{
 
         echo json_encode($rsp);
     }
+
+    public function logout(){
+        session('tb_nick',null);
+        session('shop_id',null);
+        cookie('access_token',null);
+
+        $rsp = array();
+
+        $o = new OAuth('taobao');
+        $rsp['ret'] = ERR_GENERAL_NOT_LOGIN;
+        $rsp['login_url'] = $o->getLoginUrl("/login/jump?goto=".base64_encode($_POST['url']));
+        echo json_encode($rsp);
+    }
 }
 ?>
